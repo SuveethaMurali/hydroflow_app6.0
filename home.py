@@ -102,13 +102,13 @@ except Exception:
     OWM_KEY = None
 
 # ---------------- Sidebar Navigation ----------------
-st.sidebar.title("🌧️ RunMeter Navigation")
-st.sidebar.markdown("### Pages")
-st.sidebar.page_link("Home.py", label="🏠 Home", icon="🏠")
-st.sidebar.page_link("pages/1_Method_Selection.py", label="📘 Method Selection", icon="🧮")
-st.sidebar.page_link("pages/2_SCN_Method.py", label="🌀 SCN Method", icon="💧")
-st.sidebar.page_link("pages/3_Strangers_Method.py", label="📈 Strangers Method", icon="📊")
-st.sidebar.page_link("pages/4_Runoff_Result.py", label="📊 Runoff Result", icon="📉")
+st.sidebar.markdown("### 🧭 Navigation")
+st.sidebar.write("🏠 Home")
+st.sidebar.button("📘 Method Selection")
+st.sidebar.button("🌀 SCN Method")
+st.sidebar.button("📈 Strangers Method")
+st.sidebar.button("📊 Runoff Result")
+
 
 with st.sidebar.expander("⚙️ Weather Settings", expanded=True):
     units = st.radio("Units", ["metric", "imperial"], index=0, horizontal=True, help="Metric = °C, km/h; Imperial = °F, mph")
